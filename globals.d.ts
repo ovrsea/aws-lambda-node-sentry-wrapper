@@ -1,1 +1,1 @@
-export type withLoggerType = <E>(handler: ((event: E)=> Promise<any>)) => (event: E) => Promise<any>
+export type withLoggerType = <E>(handler: ((event: E, sentry?: any)=> Promise<any>)) => (event: E) => Promise<any>

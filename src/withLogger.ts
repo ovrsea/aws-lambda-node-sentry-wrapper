@@ -9,7 +9,7 @@ Sentry.init({
 
 const withLogger: withLoggerType = (handler => async (event) => {
   try {
-    return await handler(event);
+    return await handler(event, Sentry);
   }
   catch (err) {
     try {
