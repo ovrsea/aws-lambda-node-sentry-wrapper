@@ -12,14 +12,18 @@ const withLogger: withLoggerType = (handler => async (event) => {
     return await handler(event);
   }
   catch (err) {
+    try {
       await Sentry.getCurrentHub()
         .getClient()
         .captureException(err)
-        .then(() => {
-          // request status
-          throw err
-        })
     }
+    catch(sentryError){
+      //well, in this case, Sentry failed.
+      console.warn("Sentry failed:", sentryError)
+    }
+    throw err
+
+  }
 });
 
 export { withLogger }
