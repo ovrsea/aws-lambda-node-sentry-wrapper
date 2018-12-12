@@ -1,6 +1,10 @@
 import * as Sentry from '@sentry/node';
 import { withLoggerType } from "../globals";
-Sentry.init({ dsn: process.env.SENTRY_DSN, environment: process.env.STAGE });
+
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+  environment: process.env.STAGE
+});
 
 
 const withLogger: withLoggerType = (handler => async (event) => {
@@ -11,9 +15,9 @@ const withLogger: withLoggerType = (handler => async (event) => {
       await Sentry.getCurrentHub()
         .getClient()
         .captureException(err)
-        .then((error) => {
+        .then(() => {
           // request status
-          throw error
+          throw err
         })
     }
 });
