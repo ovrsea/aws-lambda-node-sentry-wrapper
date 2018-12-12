@@ -1,0 +1,1 @@
+export type withLoggerType = <E>(handler: ((event: E)=> Promise<any>)) => (event: E) => Promise<any>
