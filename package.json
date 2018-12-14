@@ -1,6 +1,6 @@
 {
   "name": "aws-lambda-node-sentry-wrapper",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": "https://github.com/ovrsea/aws-lambda-node-sentry-wrapper.git",
   "author": "antoine@ovrsea.com",
   "license": "MIT",
@@ -8,7 +8,6 @@
     "node": ">=6.0.0"
   },
   "devDependencies": {
-    "@sentry/node": "4.4.1",
     "@types/aws-sdk": "^2.7.0",
     "@types/node": "^10.12.12",
     "typescript": "^3.2.2",
@@ -20,5 +19,8 @@
   "scripts": {
     "compile": "tsc",
     "test": "jest"
+  },
+  "dependencies": {
+    "@sentry/node": "4.4.1"
   }
 }
