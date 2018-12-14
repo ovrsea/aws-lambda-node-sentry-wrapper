@@ -3,9 +3,8 @@ import { withLoggerType } from "../globals";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
-  environment: process.env.STAGE
+  environment: process.env.STAGE || 'test'
 });
-
 
 const withLogger: withLoggerType = (handler => async (event) => {
   try {

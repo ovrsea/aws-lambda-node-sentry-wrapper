@@ -2,7 +2,11 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
-    "sourceMap": false
+    "sourceMap": false,
+    "lib": [
+      "es2017",
+      "esnext.asynciterable"
+    ]
   },
   "exclude": [
     "node_modules"
