@@ -1,6 +1,6 @@
 {
   "name": "aws-lambda-node-sentry-wrapper",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "repository": "https://github.com/ovrsea/aws-lambda-node-sentry-wrapper.git",
   "author": "antoine@ovrsea.com",
   "main": "index.js",
@@ -15,7 +15,10 @@
     "@types/node": "^10.12.12",
     "dotenv": "^6.2.0",
     "jest": "^23.6.0",
+    "prettier": "^1.15.3",
     "ts-jest": "^23.10.5",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.2.2"
   },
   "scripts": {
@@ -25,9 +28,6 @@
     "lint": "tslint -p tsconfig.json"
   },
   "dependencies": {
-    "@sentry/node": "4.4.1",
-    "prettier": "^1.15.3",
-    "tslint": "^5.12.0",
-    "tslint-config-prettier": "^1.17.0"
+    "@sentry/node": "4.4.1"
   }
 }
