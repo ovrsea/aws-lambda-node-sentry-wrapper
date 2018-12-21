@@ -5,6 +5,8 @@ This package is a wrapper for Node 8 lambda functions on AWS.
 It catches errors in Sentry and waits that the promise is resolved before returning. It avoids the process to be frozen 
 by aws before the error is reported in Sentry.
 
+### Note:
+https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c
 
 The DSN must be provided via `process.env.SENTRY_DSN`, for example using serverless env variables.
 
