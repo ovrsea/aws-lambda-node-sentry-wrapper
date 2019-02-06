@@ -3,7 +3,8 @@
   "version": "0.0.8",
   "repository": "https://github.com/ovrsea/aws-lambda-node-sentry-wrapper.git",
   "author": "antoine@ovrsea.com",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types" : "lib/index.d.ts",
   "files": ["lib/**/*"],
   "license": "MIT",
   "engines": {
