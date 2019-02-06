@@ -1,6 +1,6 @@
 {
   "name": "aws-lambda-node-sentry-wrapper",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "repository": "https://github.com/ovrsea/aws-lambda-node-sentry-wrapper.git",
   "author": "antoine@ovrsea.com",
   "main": "lib/index.js",

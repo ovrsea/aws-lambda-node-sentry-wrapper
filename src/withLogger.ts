@@ -7,6 +7,7 @@ Sentry.init({
 });
 
 const withLogger: withLoggerType = handler => async event => {
+  console.log(JSON.stringify(event, null, 2))
   try {
     return await handler(event, Sentry);
   } catch (err) {
