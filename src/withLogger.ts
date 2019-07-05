@@ -4,7 +4,7 @@ import { withLoggerType } from '../globals';
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
   environment: process.env.STAGE || 'test',
-  maxMessageLength: 2000,
+  maxValueLength: 2000,
   release: process.env.SENTRY_RELEASE,
 });
 
