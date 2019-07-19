@@ -13,13 +13,15 @@ const withLogger: withLoggerType = handler => async event => {
   try {
     return await handler(event, Sentry);
   } catch (err) {
-    try {
-      await Sentry.getCurrentHub()
-        .getClient()
-        .captureException(err);
-    } catch (sentryError) {
-      // well, in this case, Sentry failed.
-      console.warn('Sentry failed:', sentryError);
+    if (process.env.ENV === "prod") {
+      try {
+        await Sentry.getCurrentHub()
+          .getClient()
+          .captureException(err);
+      } catch (sentryError) {
+        // well, in this case, Sentry failed.
+        console.warn('Sentry failed:', sentryError);
+      }
     }
     throw err;
   }
